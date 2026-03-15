@@ -4,20 +4,88 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+  --border: rgba(0, 0, 0, 0.1);
+  --card: #fdfdfd;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='dark'] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --card: #0a0a0a;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-3xl bg-white/5 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+    position: relative;
+    will-change: backdrop-filter, transform;
+  }
+  
+  .glass-card::before {
+    content: "";
+    @apply absolute inset-0 rounded-[inherit] border border-white/5 pointer-events-none;
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
+
+  .text-editorial {
+    @apply font-display tracking-tight leading-[1.1];
+  }
+}
+
+/* Hide scrollbars but keep functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+* {
+  user-select: none;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url('http://assets.iceablethemes.com/img/noise-transparent.png') repeat;
+  background-repeat: repeat;
+  animation: noise 0.5s steps(5) infinite;
+  opacity: 0.05;
+  visibility: visible;
+  z-index: 1000;
+  pointer-events: none;
+  will-change: transform;
+}
+
+@keyframes noise {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
 }
 
 @layer utilities {
