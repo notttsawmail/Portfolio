@@ -9,47 +9,28 @@ export const portfolioData = {
   // 1. PERSONAL INFORMATION
   // Change your name, title, and bio here
   personal: {
-    name: "Shamel Rai",
+    name: "Shamel Rai Jr.",
     initials: "SR", // Shown in the "About Me" profile circle
-    title: "Full Stack Junior Developer",
+    title: "Backend Developer",
     location: "Thasikhel, Lalitpur",
-    bio: "Full Stack Junior Developer specializing in building scalable systems and user-friendly applications. Focused on Backend and Flutter development with a commitment to technical excellence.",
-    quote: "Growing into a skilled developer capable of building scalable systems.",
+    bio: "Junior Full Stack Developer with experience in backend development using NestJS, Node.js, Express, MongoDB, SQL, and Prisma. Skilled in building RESTful APIs, implementing authentication, and structuring maintainable applications.",
+    quote: "Eager to continue growing in backend and full stack development while contributing to scalable, high-quality software solutions.",
     
     // These stats appear in the boxes on the About page
     stats: [
       { label: "Experience", value: "Junior" },
       { label: "Focus", value: "Backend" },
-      { label: "Learning", value: "Flutter" },
+      { label: "Learning", value: "Full Stack" },
       { label: "Location", value: "Lalitpur" }
     ],
     
     // Use this list for things you are currently learning or interested in
-    exploring: ["Flutter", "NestJS", "Linux",]
+    exploring: ["Flutter", "NestJS", "Linux", "Data Engineering"]
   },
 
   // 2. PROJECTS
   // Add or remove projects here. Each project needs an id, name, tagline, and details.
   projects: [
-    // {
-    //   id: "novapay",
-    //   name: "NovaPay",
-    //   tagline: "Next-gen payment infrastructure",
-    //   emoji: "💳", // Use any emoji you like!
-    //   stack: ["Next.js", "Node.js", "PostgreSQL", "Redis", "Stripe", "AWS"],
-    //   description: "A robust and scalable payment processing platform designed for modern enterprises. Features include real-time fraud detection, multi-currency support, and seamless developer APIs.",
-    //   featured: true
-    // },
-    // {
-    //   id: "orbits",
-    //   name: "Orbits",
-    //   tagline: "Real-time team collaboration",
-    //   emoji: "🪐",
-    //   stack: ["React", "TypeScript", "WebSockets", "Prisma", "OpenAI", "Vercel"],
-    //   description: "A spatial collaboration tool that brings teams together in a virtual environment. Uses WebSockets for low-latency interactions and AI to summarize meeting notes and action items.",
-    //   featured: true
-    // }
-
     {
       id: "tbc",
       name: "To Be Continued...",
@@ -64,10 +45,10 @@ export const portfolioData = {
   // 3. SKILLS
   // Group your skills into categories. These appear in the "Skills" app.
   skills: {
-    "Programming Languages": ["Dart", "JavaScript"],
-    "Frameworks": ["Flutter", "Express", "NestJS"],
-    "Database": ["MongoDB", "SQL", "Prisma"],
-    "Version Control": ["Git", "Github"]
+    "Programming Languages": ["Dart", "JavaScript", "SQL"],
+    "Framework & Libraries": ["Flutter", "Express", "NestJS"],
+    "Database & ORM": ["MongoDB", "SQL", "Prisma"],
+    "Tools": ["Git", "GitHub", "Postman"]
   },
 
   // 4. PROFESSIONAL EXPERIENCE
@@ -77,21 +58,21 @@ export const portfolioData = {
       company: "ARForgeTech",
       role: "Full Stack Junior Developer",
       date: "Mar 2026–Present",
-      description: "Working as a Junior Developer focusing on both frontend and backend systems.",
-      stack: ["React", "NestJS", "Flutter", "Clean Architecture"]
+      description: "Developing and maintaining full stack web applications with a focus on backend services and API integration. Building scalable RESTful APIs and supporting frontend-backend connectivity.",
+      stack: ["React", "NestJS", "Flutter", "REST API", "Full Stack"]
     },
     {
       company: "ARForgeTech",
       role: "Backend Intern",
       date: "Dec 2025–Mar 2026",
-      description: "Developed and maintained backend APIs using NestJS. Structured application using modules, controllers, services, and DTO validation. Integrated environment configuration and middleware for logging.",
+      description: "Developed and maintained backend APIs using NestJS. Designed RESTful endpoints for CRUD operations and business logic. Implemented JWT-based authentication and authorization.",
       stack: ["NestJS", "JWT", "Clean Architecture", "REST API", "DTO"]
     },
     {
       company: "Fantastic Story Studio",
       role: "Backend Intern",
       date: "Aug 2024–Nov 2024",
-      description: "Developed and optimized RESTful APIs using Node.js and Express. Designed and managed MongoDB databases. Improved application reliability by identifying and resolving backend issues.",
+      description: "Developed and optimized RESTful APIs using Node.js and Express. Designed and managed MongoDB databases. Implemented JWT authentication to enhance security.",
       stack: ["Node.js", "Express", "MongoDB", "JWT"]
     },
     {
@@ -116,13 +97,13 @@ export const portfolioData = {
   // 6. CERTIFICATIONS
   // Any professional certificates or courses you've completed.
   certificates: [
-    { name: "AWS Academy Graduate - AWS Academy Data Engineering" },
-    { name: "AWS Academy Graduate - AWS Academy Machine Learning Learning for Natural Language Processing" },
+    { name: "AWS Academy Graduate – AWS Academy Cloud Foundations" },
+    { name: "AWS Academy Graduate – AWS Academy Data Engineering" },
+    { name: "AWS Academy Graduate – AWS Academy Machine Learning for Natural Language Processing" },
+    { name: "AWS Academy Graduate – AWS Academy Machine Learning Foundations" },
     { name: "Meta Programming Fundamentals in Kotlin" },
-    { name: "Meta Version Control" },
-    { name: "AWS Academy Graduate - AWS Academy Cloud Foundations" },
-    { name: "AWS Academy Graduate - AWS Academy Machine Learning Learning Foundations" },
-    { name: "Code Institute 5-Day Coding Challenge" }
+    { name: "Code Institute 5-Day Coding Challenge" },
+    { name: "Meta Version Control" }
   ],
 
   // 7. CONTACT & SOCIALS
@@ -132,6 +113,7 @@ export const portfolioData = {
     phone: "+977 9813663550",
     github: "github.com/notttsawmail",
     linkedin: "linkedin.com/in/shamelrai",
-    cvPath: "/resume.pdf"
+
+    cvPath: "/Shamel_Rai_Resume.pdf"
   }
 };
